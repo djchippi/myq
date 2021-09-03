@@ -2,7 +2,7 @@
   "name": "@koush/myq",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "clean": "rimraf ./dist",
