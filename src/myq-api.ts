@@ -2,11 +2,13 @@
  *
  * myq-api.ts: Our myQ API implementation.
  */
-import fetch, { FetchError, Headers, RequestInfo, RequestInit, Response, isRedirect } from "node-fetch";
+import fetch from "node-fetch";
+import { FetchError, Headers, RequestInfo, RequestInit, Response } from "node-fetch";
 import { myQAccount, myQDevice, myQDeviceList, myQHwInfo, myQToken } from "./myq-types";
 import { MYQ_API_CLIENT_ID, MYQ_API_CLIENT_SECRET, MYQ_API_REDIRECT_URI, MYQ_API_TOKEN_REFRESH_INTERVAL } from "./settings";
 import { Logging } from "./logging";
 import { parse } from "node-html-parser";
+import { isRedirect } from "./util";
 import pkceChallenge from "pkce-challenge";
 import util from "util";
 
